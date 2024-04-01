@@ -1,9 +1,14 @@
 import { Link } from '@remix-run/react';
 import { FaArrowRight, FaDollarSign, FaChartBar } from 'react-icons/fa';
 import marketingStyles from '~/styles/marketing.css'
+import MainHeader from '../components/navigation/MainHeader';
 
 export default function Index() {
   return (
+    <>
+    <header>
+      <MainHeader />
+    </header>
     <main>
       <section className="marketing-section">
         <header>
@@ -41,6 +46,7 @@ export default function Index() {
         </div>
       </section>
     </main>
+    </>
   );
 }
 

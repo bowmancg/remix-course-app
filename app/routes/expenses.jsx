@@ -13,6 +13,7 @@ const DUMMY_EXPENSES = [
     },
   ];
   
+  import ExpensesHeader from '~/components/navigation/ExpensesHeader';
   import { Outlet } from '@remix-run/react';
   import ExpensesList from '~/components/expenses/ExpensesList';
   import expensesStyles from '~/styles/expenses.css';
@@ -21,6 +22,9 @@ const DUMMY_EXPENSES = [
     return (
       <>
         <Outlet />
+        <header>
+          <ExpensesHeader />
+        </header>
         <main>
           <ExpensesList expenses={DUMMY_EXPENSES} />
         </main>

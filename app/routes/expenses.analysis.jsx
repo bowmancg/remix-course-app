@@ -13,14 +13,20 @@ const DUMMY_EXPENSES = [
     },
   ];
   
+  import ExpensesHeader from '~/components/navigation/ExpensesHeader';
   import ExpenseStatistics from '~/components/expenses/ExpenseStatistics';
   import Chart from '~/components/expenses/Chart';
   
   export default function ExpensesAnalysisPage() {
     return (
+      <>
+      <header>
+        <ExpensesHeader />
+      </header>
       <main>
         <Chart expenses={DUMMY_EXPENSES} />
         <ExpenseStatistics expenses={DUMMY_EXPENSES} />
       </main>
+      </>
     );
   }
